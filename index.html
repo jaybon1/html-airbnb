@@ -54,7 +54,7 @@
         font-weight: 800;
       }
 
-      .search-box {
+      /* .search-box {
         width: 430px;
         display: inline-block;
         padding: 20px 30px;
@@ -64,7 +64,7 @@
         left: 50px;
         border-radius: 6px;
         box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
-      }
+      } */
 
       .search-explain {
         padding: 10px 0;
@@ -136,11 +136,11 @@
         margin: 0 0 0 10px;
       }
 
-      .category-box {
+      /* .category-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-      }
+      } */
 
       .category-card {
         display: grid;
@@ -157,11 +157,11 @@
         height: 350px;
       }
 
-      .suggest-box {
+      /* .suggest-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-      }
+      } */
 
       .suggest-img {
         height: 250px;
@@ -173,11 +173,11 @@
         height: 300px;
       }
 
-      .host-box {
+      /* .host-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-      }
+      } */
 
       .host-img {
         height: 180px;
@@ -199,6 +199,136 @@
       .host-count,
       .host-grade {
         font-size: 12px;
+      }
+
+      /* styles for desktop devices */
+      @media only screen and (min-width: 1536px) {
+        .category-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .suggest-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .host-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .search-box {
+          width: 430px;
+          display: inline-block;
+          padding: 20px 30px;
+          background-color: white;
+          position: relative;
+          top: 10px;
+          left: 50px;
+          border-radius: 6px;
+          box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+        }
+      }
+
+      /* styles for desktop devices */
+      @media only screen and (min-width: 1024px) and (max-width: 1535px) {
+        .category-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .suggest-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .host-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .search-box {
+          width: 430px;
+          display: inline-block;
+          padding: 20px 30px;
+          background-color: white;
+          position: relative;
+          top: 10px;
+          left: 50px;
+          border-radius: 6px;
+          box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+        }
+      }
+
+      /* styles for tablet devices */
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .category-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .suggest-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .host-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .search-box {
+          width: 430px;
+          display: inline-block;
+          padding: 20px 30px;
+          background-color: white;
+          position: relative;
+          top: 10px;
+          left: 50px;
+          border-radius: 6px;
+          box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+        }
+      }
+
+      /* styles for mobile devices */
+      @media only screen and (max-width: 767px) {
+        .category-box {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+        }
+
+        .suggest-box {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+        }
+
+        .host-box {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+        }
+
+        .search-box {
+          width: 430px;
+          display: block;
+          padding: 20px 30px;
+          background-color: white;
+          margin: auto auto;
+          border-radius: 6px;
+          box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+        }
       }
     </style>
     <title>Document</title>

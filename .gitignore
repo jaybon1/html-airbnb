@@ -1,0 +1,5 @@
+# vscode 제외
+.vscode
+
+# 인텔리제이 제외
+.idea
