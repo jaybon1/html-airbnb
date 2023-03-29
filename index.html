@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="shortcut icon"
+      sizes="76x76"
+      type="image/x-icon"
+      href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .center-cover-img {
+        background-size: cover;
+        background-position: center;
+      }
+
+      header {
+        height: 880px;
+        background-image: url("./images/background.jpg");
+        /*background-attachment: fixed;*/
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        padding: 20px 20px;
+      }
+
+      .logo {
+        color: white;
+        font-size: 35px;
+        font-weight: 800;
+      }
+
+      .nav-menu ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 30px;
+        list-style-type: none;
+      }
+
+      .nav-menu ul a {
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+      }
+
+      .search-box {
+        width: 430px;
+        display: inline-block;
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        top: 10px;
+        left: 50px;
+        border-radius: 6px;
+        box-shadow: 0 2px 2px 0 rgb(214, 214, 214);
+      }
+
+      .search-explain {
+        padding: 10px 0;
+        font-size: 30px;
+        font-weight: 800;
+        color: rgb(75, 74, 74);
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .search-label {
+        padding: 10px 0;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .search-input {
+        padding: 10px;
+        height: 45px;
+        width: 100%;
+        color: rgb(100, 98, 98);
+        font-size: 15px;
+        border: 1px solid rgb(230, 227, 227);
+      }
+
+      .search-button {
+        display: grid;
+        justify-content: end;
+        padding: 20px 0;
+      }
+
+      .search-button button {
+        background-color: #ff5a5f;
+        color: white;
+        width: 70px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 700; /*굵기*/
+        border-radius: 6px;
+        border: 0;
+        cursor: pointer;
+      }
+
+      main {
+        margin: 30px 80px;
+      }
+
+      section {
+        margin: 30px 0;
+      }
+
+      .section-title {
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(68, 66, 66);
+        margin: 0 0 20px 0;
+      }
+
+      .category-img {
+        height: 70px;
+      }
+
+      .category-name {
+        display: grid;
+        align-items: center;
+        font-weight: 600;
+        margin: 0 0 0 10px;
+      }
+
+      .category-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .category-card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        border: 1px solid rgb(212, 210, 210);
+        border-radius: 6px;
+        box-shadow: 0 0 3px 0 rgb(172, 170, 170);
+      }
+
+      .wide-area-img-1 {
+        border-radius: 20px;
+        margin: 40px 0;
+        background-image: url("./images/wide1.jpg");
+        height: 350px;
+      }
+
+      .suggest-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .suggest-img {
+        height: 250px;
+      }
+
+      .wide-area-img-2 {
+        margin: 20px 0;
+        background-image: url("./images/wide2.png");
+        height: 300px;
+      }
+
+      .host-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .host-img {
+        height: 180px;
+      }
+
+      .host-type-location {
+        margin: 5px 0;
+        font-size: 13px;
+        color: gray;
+      }
+
+      .host-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(61, 60, 60);
+      }
+
+      .host-star,
+      .host-count,
+      .host-grade {
+        font-size: 12px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="center-cover-img">
+      <nav>
+        <div class="logo">
+          <svg
+            viewBox="0 0 1000 1000"
+            role="presentation"
+            aria-hidden="true"
+            focusable="false"
+            style="
+              height: 1em;
+              width: 1em;
+              display: inline-block;
+              fill: currentcolor;
+            "
+          >
+            <path
+              d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
+            ></path>
+          </svg>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#">호스트가 되어보세요</a></li>
+            <li><a href="#">도움말</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <div class="search-box">
+          <div class="search-explain">
+            특색 있는 숙소와 즐길<br />
+            거리를 예약하세요.
+          </div>
+          <table>
+            <tr>
+              <td colspan="2" class="search-label">목적지</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input
+                  class="search-input"
+                  type="text"
+                  placeholder="모든 위치"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="search-label">체크인</td>
+              <td class="search-label">체크아웃</td>
+            </tr>
+            <tr>
+              <td><input class="search-input" type="date" /></td>
+              <td><input class="search-input" type="date" /></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="search-label">인원</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <select class="search-input">
+                  <option>인원</option>
+                  <option>1~2명</option>
+                  <option>3~4명</option>
+                  <option>5명 이상</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <div class="search-button">
+            <button>검색</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <div class="section-title">에어비앤비 둘러보기</div>
+        <div class="category-box">
+          <div class="category-card">
+            <div
+              class="category-img center-cover-img"
+              style="background-image: url('images/category1.jpg')"
+            ></div>
+            <div class="category-name">숙소 및 부티크 호텔</div>
+          </div>
+          <div class="category-card">
+            <div
+              class="category-img center-cover-img"
+              style="background-image: url('images/category2.jpg')"
+            ></div>
+            <div class="category-name">트립</div>
+          </div>
+          <div class="category-card">
+            <div
+              class="category-img center-cover-img"
+              style="background-image: url('images/category3.jpg')"
+            ></div>
+            <div class="category-name">어드벤처</div>
+          </div>
+          <div class="category-card">
+            <div
+              class="category-img center-cover-img"
+              style="background-image: url('images/category4.jpg')"
+            ></div>
+            <div class="category-name">레스토랑</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wide-area-img-1 center-cover-img"></div>
+      </section>
+
+      <section>
+        <div class="section-title">추천 여행지</div>
+        <div class="suggest-box">
+          <div
+            class="suggest-img center-cover-img"
+            style="background-image: url('images/suggest1.png')"
+          ></div>
+          <div
+            class="suggest-img center-cover-img"
+            style="background-image: url('images/suggest2.png')"
+          ></div>
+          <div
+            class="suggest-img center-cover-img"
+            style="background-image: url('images/suggest3.png')"
+          ></div>
+          <div
+            class="suggest-img center-cover-img"
+            style="background-image: url('images/suggest4.png')"
+          ></div>
+          <div
+            class="suggest-img center-cover-img"
+            style="background-image: url('images/suggest5.png')"
+          ></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title" style="margin-bottom: 5px">
+          에어비앤비 플러스를 만나보세요!
+        </div>
+        <div class="host-explain">
+          퀄리티와 인테리어 디자인이 검증된 숙소 셀렉션
+        </div>
+        <div class="wide-area-img-2 center-cover-img"></div>
+      </section>
+
+      <section>
+        <div class="section-title">전 세계 숙소</div>
+
+        <div class="host-box">
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host1.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">오두막 · BALIAN BEACH, BALI</div>
+              <div class="host-name">BALIAN TREEHOUSE w beautiful pool</div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">185</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host2.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">키클라데스 주택 · 이아(OIA)</div>
+              <div class="host-name">Unique Architecture Cave House</div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">188</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host3.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">
+                성 · 트웬티나인 팜스(TWENTYNINE PALMS)
+              </div>
+              <div class="host-name">Tile House</div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">367</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host4.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">검증됨 · 케이프타운</div>
+              <div class="host-name">
+                Modern, Chic Penthouse with Mountain, City & Sea Views
+              </div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">177</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host5.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">
+                아파트 전체 · 마드리드(MADRID)
+              </div>
+              <div class="host-name">솔광장에 위치한 개인 스튜디오</div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">459</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host6.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">집 전체 · HUMAC</div>
+              <div class="host-name">
+                Vacation house in etno-eco village Humac
+              </div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">119</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host7.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">개인실 · 마라케시</div>
+              <div class="host-name">The Cozy Palace</div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">559</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-card">
+            <div
+              class="host-img center-cover-img"
+              style="background-image: url('./images/host8.png')"
+            ></div>
+            <div class="host-info">
+              <div class="host-type-location">
+                게스트용 별채 전체 · 로스앤젤레스
+              </div>
+              <div class="host-name">
+                Private Pool House with Amazing Views!
+              </div>
+              <div class="host-feedback">
+                <span class="host-star">⭐⭐⭐⭐⭐</span>
+                <span class="host-count">170</span>
+                <span class="host-grade">슈퍼호스트</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
